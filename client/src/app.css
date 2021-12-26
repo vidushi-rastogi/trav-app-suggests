@@ -1,0 +1,134 @@
+form {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+input, textarea {
+    border: none;
+    border-bottom: 1px solid rgb(116, 116, 116);
+}
+input::placeholder, textarea::placeholder {
+    font-size: 13px;
+    color: rgb(143, 143, 143);
+}
+select {
+    padding: 3px 5px;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid rgb(116, 116, 116);
+ }
+label {
+    color: rgb(192, 45, 45);
+    font-size: 15px;
+    border-bottom: 1px solid rgb(192, 45, 45);
+    margin: 5px 0;
+    margin-top: 10px;
+}
+
+.info-card {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.review {
+    font-size: 16px;
+}
+.username {
+    font-size: 16px;
+}
+.time {
+    font-size: 14px;
+}
+.star {
+    color: goldenrod;
+}
+.submitForm {
+    color: white;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(192, 45, 45);
+    border-radius: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.submitForm:hover {
+    color: rgb(192, 45, 45);
+    background-color: white;
+    border: 1px solid rgb(192, 45, 45);
+}
+.submitForm:focus{
+    color: white;
+    border: none;
+    background-color: rgb(151, 37, 37);
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login{
+    background-color: rgb(76, 187, 187);
+}
+.login:hover {
+    color: rgb(41, 110, 110);
+    background-color: white;
+    border: 1px solid rgb(41, 110, 110);
+}
+.login:focus{
+    color: white;
+    border: none;
+    background-color: rgb(41, 110, 110);
+}
+
+.logout{
+    background-color: rgb(180, 61, 61); 
+}
+.logout:hover {
+    color: rgb(129, 46, 46);
+    background-color: white;
+    border: 1px solid rgb(129, 46, 46);
+}
+.logout:focus{
+    color: white;
+    border: none;
+    background-color: rgb(129, 46, 46);
+}
+
+.signin{
+    background-color: rgb(64, 119, 182); 
+    margin-left: 10px;
+}
+.signin:hover {
+    color: rgb(43, 79, 119);
+    background-color: white;
+    border: 1px solid rgb(43, 79, 119);
+}
+.signin:focus{
+    color: white;
+    border: none;
+    background-color: rgb(43, 79, 119);
+}
+
+.btn-login-signin, .logout {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.review-form form {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

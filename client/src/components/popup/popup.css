@@ -1,0 +1,20 @@
+.pin-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    color:rgb(192, 45, 45);
+}
+
+.delete {
+    right: 7px;
+}
+.edit {
+    right: 30px;
+}
+
+.popconfirm {
+    padding: 5%;
+}
+.popconfirm p {
+    padding-bottom: 5%;
+}
