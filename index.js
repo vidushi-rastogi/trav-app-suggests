@@ -13,7 +13,7 @@ const userRoute = require("./routes/users");
 dotenv.config();
 
 mongoose
-    .connect('mongodb+srv://admin-vidushi:admin123@cluster0.bs1qi.mongodb.net/travelDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+    .connect(process.env.MONGODB_CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("MongoDB connected!");
     })
