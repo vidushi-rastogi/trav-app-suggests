@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/pins");
+        const res = await axios.get("/pins");
         setPins(res.data)
       }
       catch (err) {
