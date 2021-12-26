@@ -46,8 +46,8 @@ const PinPopup = ({pin, setPins, setCurrentLoc, currentUser}) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete("/pins/pin?id="+id);
-      const allpins = await axios.get("/pins");
+      const res = await axios.delete("/api/pins/pin?id="+id);
+      const allpins = await axios.get("/api/pins");
       setPins(allpins.data)
       console.log(res); 
     }
@@ -67,8 +67,8 @@ const PinPopup = ({pin, setPins, setCurrentLoc, currentUser}) => {
       rating: rating
     }
     const config = { headers: {'Content-Type': 'application/json'} };
-    const res = await axios.put("/pins/pin?id="+id, obj, config);
-    const allpins = await axios.get("/pins");
+    const res = await axios.put("/api/pins/pin?id="+id, obj, config);
+    const allpins = await axios.get("/api/pins");
     setPins(allpins.data)
     console.log(res);
     setOpen(false);

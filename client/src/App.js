@@ -7,6 +7,10 @@ import './app.css';
 import { Signup } from './components/signup/Signup';
 import { Login } from './components/login/Login';
 import PinPopup from './components/popup/PinPopup';
+import mapboxgl from 'mapbox-gl';
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 function App() {
 
@@ -38,7 +42,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("/pins");
+        const res = await axios.get("/api/pins");
         setPins(res.data)
       }
       catch (err) {
@@ -97,7 +101,7 @@ function App() {
     };
 
     try {
-      const res = await axios.post("/pins", addPin);
+      const res = await axios.post("/api/pins", addPin);
       setPins([...pins, res.data]);
       setNewPin(null);
     }

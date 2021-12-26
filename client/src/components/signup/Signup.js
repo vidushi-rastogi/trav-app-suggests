@@ -17,7 +17,7 @@ export const Signup = ({setShowSignup}) => {
         e.preventDefault();
 
         try {
-            const users = await axios.get("/users");
+            const users = await axios.get("/api/users");
             console.log(users);
             var exist = users.data.some(user => {
                 return nameRef.current.value === user.username;
@@ -50,7 +50,7 @@ export const Signup = ({setShowSignup}) => {
             };
     
             try {
-                await axios.post("/users/signup", newUser);
+                await axios.post("/api/users/signup", newUser);
                 setFailure(false);
                 setSuccess(true);
             }

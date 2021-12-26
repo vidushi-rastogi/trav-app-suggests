@@ -20,7 +20,7 @@ export const Login = ({setShowLogin, localStorage, setCurrentUser}) => {
         }
 
         try {
-            const res = await axios.post("/users/login", user);
+            const res = await axios.post("/api/users/login", user);
             if (res.data === "wrong username or password") {
                 setError("Invalid username or password")
                 setFailure(true);
